@@ -34,34 +34,35 @@ So you need to write your select element like this:
 
 1. In your project install the plugin via `jspm` with following command
 
-```
-  $ jspm install github:Masquerade-Circus/aurelia-material-selectfield
-```
+  ```
+    $ jspm install github:Masquerade-Circus/aurelia-material-selectfield
+  ```
 
 2. Make sure you use [manual bootstrapping](http://aurelia.io/docs#startup-and-configuration). In order to do so open your `index.html` and locate the element with the attribute aurelia-app:
 
-```html
-<body aurelia-app="main">
-...
-```
+  ```html
+  <body aurelia-app="main">
+  ...
+  ```
   
 3. Update  `main.js` in your `src` folder with following content:
 
-```javascript
-export function configure(aurelia) {
-  aurelia.use
-      .standardConfiguration()
-      .developmentLogging()
-      // Install the plugin
-      .plugin('Masquerade-Circus/aurelia-material-selectfield');
-
-  aurelia.start().then(a => a.setRoot());
-}
-```
+  ```javascript
+  export function configure(aurelia) {
+    aurelia.use
+        .standardConfiguration()
+        .developmentLogging()
+        // Install the plugin
+        .plugin('Masquerade-Circus/aurelia-material-selectfield');
+  
+    aurelia.start().then(a => a.setRoot());
+  }
+  ```
   
 4. Include material-selectfield css in your `index.html`
   
-```html
-  <link rel="stylesheet" href="jspm_packages/github/Masquerade-Circus/aurelia-material-selectfield@master/mdl-selectfield.css">
-```
+  ```html
+    <link rel="stylesheet" href="jspm_packages/github/Masquerade-Circus/aurelia-material-selectfield@master/mdl-selectfield.css">
+  ```
+  
 5. Use the selectfield component as explained.
